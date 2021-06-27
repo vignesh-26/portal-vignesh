@@ -4,7 +4,8 @@ const request = require('request');
 const bodyParser = require("body-parser");
 const app = express();
 app.use(bodyParser.json());
-// for angular sserver connection
+// for angular sserver connection vicky
+ 
 app.use(function(req, res, next) {
 
     res.header("Access-Control-Allow-Origin", "*");
