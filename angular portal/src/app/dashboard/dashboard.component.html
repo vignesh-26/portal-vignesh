@@ -20,7 +20,8 @@
                             Profile
                         </mat-panel-title>
                     </mat-expansion-panel-header>
-                    <p (click)='route("Profile")'>MyProfile</p>
+                    <a (click)='route("Profile")'>MyProfile</a><br>
+
                     <p (click)='route("editprofile")'>EditProfile</p>
                 </mat-expansion-panel>
 
@@ -73,7 +74,7 @@
                 <app-sales></app-sales>
             </div>
             <div *ngIf="page=='editprofile'">
-                Sales
+
                 <app-editprofile></app-editprofile>
             </div>
 
