@@ -1,7 +1,7 @@
 <div>
     <app-header></app-header>
     <mat-drawer-container>
-        <mat-drawer #drawer class="example-sidenav" opened mode="side">
+        <mat-drawer #drawer class="example-sidenav bg-primary" opened mode="side">
 
             <mat-accordion class="accordion">
                 <mat-expansion-panel>
@@ -19,7 +19,7 @@
                             Profile
                         </mat-panel-title>
                     </mat-expansion-panel-header>
-                    <p (click)='route("myProfile")'>MyProfile</p>
+                    <p (click)='route("Profile")'>MyProfile</p>
                     <p (click)='route("editprofile")'>EditProfile</p>
                 </mat-expansion-panel>
 
@@ -64,7 +64,7 @@
                 <app-sales></app-sales>
             </div>
             <div *ngIf="page=='saleorder'">
-                
+sales order test
                 <app-saleorder></app-saleorder>
             </div>
             <div *ngIf="page=='invoice'">
