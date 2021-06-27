@@ -14,15 +14,16 @@
                     <p (click)='route("Dashboard")'>My Dashboard</p>
                 </mat-expansion-panel>
 
+
                 <mat-expansion-panel>
                     <mat-expansion-panel-header>
                         <mat-panel-title>
                             Profile
                         </mat-panel-title>
                     </mat-expansion-panel-header>
-                    <a (click)='route("Profile")'>MyProfile</a><br>
+                    <p (click)='route("myprofile")'>My Profile</p>
+                    <p (click)='route("editprofile")'>Edit Profile</p>
 
-                    <p (click)='route("editprofile")'>EditProfile</p>
                 </mat-expansion-panel>
 
                 <mat-expansion-panel>
@@ -56,7 +57,7 @@
                 Welcome to Dashboard
             </div>
             <div *ngIf="page=='Dashboard'">
-                Dashboard
+                <app-mydashboard></app-mydashboard>
             </div>
             <div *ngIf="page=='myprofile'">
                 <app-profile></app-profile>
@@ -70,8 +71,7 @@
                 <app-saleorder></app-saleorder>
             </div>
             <div *ngIf="page=='invoice'">
-                Sales
-                <app-sales></app-sales>
+                <app-invoice></app-invoice>
             </div>
             <div *ngIf="page=='editprofile'">
 

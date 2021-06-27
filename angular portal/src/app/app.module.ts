@@ -21,6 +21,8 @@ import { HeaderComponent } from './navbar/header.component';
 import { EditprofileComponent } from './editprofile/editprofile.component';
 import { SaleorderComponent } from './saleorder/saleorder.component';
 import {MatTableModule} from '@angular/material/table';
+import { MydashboardComponent } from './mydashboard/mydashboard.component';
+import { InvoiceComponent } from './invoice/invoice.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import {MatTableModule} from '@angular/material/table';
     ProfileComponent,
     HeaderComponent,
     EditprofileComponent,
-    SaleorderComponent
+    SaleorderComponent,
+    MydashboardComponent,
+    InvoiceComponent
     
   ],
   imports:
