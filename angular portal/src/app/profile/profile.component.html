@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Angular Portal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0">Search</button>
+            </form>
+            <ul class="navbar-nav mr-auto">
+                <button class="btn btn-outline-danger">Logout</button>
+            </ul>
+        </div>
+    </nav>
+
+
+    <mat-drawer-container>
+        <mat-drawer #drawer class="example-sidenav" opened mode="side">
+
+            <mat-accordion class="accordion">
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Dashboard
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p (click)='route("Dashboard")'>My Dashboard</p>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Profile
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p (click)='route("Profile")'>My Profile</p>
+                    <p (click)='route("Profile")'>Edit Profile</p>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Sales and Distribution
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p (click)='route("Sales")'>Sale Orders</p>
+                    <p (click)='route("Sales")'>List of Delivery</p>
+                    <p (click)='route("Sales")'>Inquiries</p>
+                </mat-expansion-panel>
+
+                
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Finance
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p (click)='route("finance")'>Invoice</p>
+                    <p (click)='route("finance")'>Payment and Aging</p>
+                    <p (click)='route("finance")'>Credit and Debit Memo</p>
+                    <p (click)='route("finance")'>Overall sales </p>
+                    <p (click)='route("finance")'>Master data</p>
+                </mat-expansion-panel>
+
+            </mat-accordion>
+
+        </mat-drawer>
+
+        <div class="example-sidenav-content">
+            <!-- <button routerLink="/login" class="logoutButton">Logout</button> -->
+            <div *ngIf="page=='Dashboard'">
+                Dashboard
+            </div>
+            <div *ngIf="page=='Profile'">
+               <app-profile></app-profile>
+               profile
+            </div>
+            <div *ngIf="page=='Sales'">
+                Sales
+            </div>
+
+        </div>
+
+    </mat-drawer-container>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

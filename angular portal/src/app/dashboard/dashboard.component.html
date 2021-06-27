@@ -1,0 +1,82 @@
+<div>
+    <app-header></app-header>
+    <mat-drawer-container>
+        <mat-drawer #drawer class="example-sidenav" opened mode="side">
+
+            <mat-accordion class="accordion">
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Dashboard
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p (click)='route("Dashboard")'>My Dashboard</p>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Profile
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p (click)='route("myProfile")'>MyProfile</p>
+                    <p (click)='route("editprofile")'>EditProfile</p>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Sales and Distribution
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p (click)='route("saleorder")'>Sale Order</p>
+                    <p (click)='route("listofdelivery")'>List of Delivery</p>
+                    <p (click)='route("inquiries")'>Inquiries</p>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Finance
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p (click)='route("invoice")'>invoice</p>
+                    <p (click)='route("paymentandaging")'>Payment and Aging</p>
+                    <p (click)='route("creditanddebit")'>Credit and Debit</p>
+                    <p (click)='route("overallsales")'>Overall Sales</p>
+                    <p (click)='route("masterdata")'>Master Data</p>
+                </mat-expansion-panel>
+            </mat-accordion>
+
+        </mat-drawer>
+
+        <div class="example-sidenav-content">
+            <div *ngIf="!page">
+                Welcome to Dashboard
+            </div>
+            <div *ngIf="page=='Dashboard'">
+                Dashboard
+            </div>
+            <div *ngIf="page=='myprofile'">
+                <app-profile></app-profile>
+            </div>
+            <div *ngIf="page=='sales'">
+                sales
+                <app-sales></app-sales>
+            </div>
+            <div *ngIf="page=='saleorder'">
+                
+                <app-saleorder></app-saleorder>
+            </div>
+            <div *ngIf="page=='invoice'">
+                Sales
+                <app-sales></app-sales>
+            </div>
+            <div *ngIf="page=='editprofile'">
+                Sales
+                <app-editprofile></app-editprofile>
+            </div>
+
+        </div>
+
+    </mat-drawer-container>
+</div>

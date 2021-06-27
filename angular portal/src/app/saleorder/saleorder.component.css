@@ -1,0 +1,17 @@
+.container{ 
+  position: absolute;
+  left: 50px;
+  top: 80px;
+  /* display: flex; */
+}
+table {
+   
+    width: 100%;
+    float: left;
+
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+  
